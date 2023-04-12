@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
   <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Setup theme-color -->
   <!-- start theme color meta headers -->
   <meta name="theme-color" content="#151515">
   <meta name="msapplication-navbutton-color" content="#151515">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
   <link rel="apple-touch-icon" sizes="57x57" href="./icon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./icon/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="./icon/apple-icon-72x72.png">
@@ -26,23 +23,18 @@
   <link rel="icon" type="image/png" sizes="96x96" href="./icon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
   <link rel="manifest" href="./icon/manifest.json">
-
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="./icon/ms-icon-144x144.png">
-
   <!-- bootstrap@5.0.2 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
   <style type="text/css">
     .selector-for-some-widget {
       box-sizing: content-box;
     }
   </style>
-
   <title>Top page | NHGM.github.io</title>
 </head>
-
 <body>
   <!-- bootstrap@5.0.2 script -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -51,131 +43,89 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
-
   <header>
     <div class="container-fluid">
       <a id="a-title" href="/">
         <h1>NHGM.github.io</h1>
       </a>
       <h3>NHGM.github.io is for amateur programmers.</h3>
-
       <section id="downloads">
-
         <a href="https://github.com/nhashimoto-gm/nhashimoto-gm.github.io" class="btn btn-dark"><span
             class="icon"></span>View on GitHub</a>
       </section>
     </div>
   </header>
-
   <div class="container-fluid">
     <section id="main_content">
       <h1 id="top-page">Top page</h1>
-
       <h1 id="bno055_i2c_rpi">BNO055_i2c_RPi</h1>
-
       <p><a href="https://github.com/nhashimoto-gm/BNO055_i2c_RPi">https://github.com/nhashimoto-gm/BNO055_i2c_RPi</a>
       </p>
-
       <h2 id="使用センサー">使用センサー</h2>
       <p>Bosch Sensortec GmbH Smart sensor: BNO055</p>
-
       <p><a
           href="https://www.bosch-sensortec.com/products/smart-sensors/bno055/">https://www.bosch-sensortec.com/products/smart-sensors/bno055/</a>
       </p>
-
       <p>Adafruit BNO055 Absolute Orientation Sensor</p>
-
       <p><a
           href="https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor">https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor</a>
       </p>
-
       <h2 id="接続機器と接続方法">接続機器と接続方法</h2>
       <p>RaspberryPIにi2c接続で通信。</p>
-
       <p>以下の通信速度で使用したほうがデータ取得安定します。</p>
-
       <p>標準のbaudrate=100000では、” OSError: [Errno 121] Remote I/O error “ が頻発しました。</p>
-
       <ul>
         <li>dtparam=i2c_arm_baudrate=50000</li>
       </ul>
-
       <p>(留意点1) プルアップ抵抗は不要です。</p>
       <p>(留意点2) OSErrorは受け流すことにしました。</p>
-
       <h2 id="注意">注意</h2>
       <p>LOCAL NETWORK上のInfluxdb v1.8サーバーへデータを送信。</p>
-
       <p>InfluxQLは以下のような形で情報取得。(Grafana等利用)</p>
       <pre
         class="highlight"><code>SELECT mean("eu_x-axis") FROM "bno055_measure_euler" WHERE $timeFilter GROUP BY time($__interval) fill(none)</code></pre>
-
       <h2 id="acknowledgments--謝辞-">Acknowledgments ( 謝辞 )</h2>
-
       <p>ghirlekar, you have been very helpful.</p>
-
       <p><a href="https://github.com/ghirlekar/bno055-python-i2c">https://github.com/ghirlekar/bno055-python-i2c</a>
       </p>
-
       <hr />
-
       <h1 id="adxl355_i2c_rpi">ADXL355_i2c_RPi</h1>
-
       <p><a href="https://github.com/nhashimoto-gm/ADXL355_i2c_RPi">https://github.com/nhashimoto-gm/ADXL355_i2c_RPi</a>
       </p>
-
       <h2 id="使用センサー-1">使用センサー</h2>
       <p>ANALOG DEVICES ADXL355</p>
-
       <p><a href="https://www.analog.com/jp/products/adxl355.html">https://www.analog.com/jp/products/adxl355.html</a>
       </p>
-
       <p>Strawberry Linux Co.,Ltd. ADXL355 超低ノイズ３軸加速度センサモジュール（ディジタル出力）2g/4g/8g</p>
-
       <p><a
           href="http://strawberry-linux.com/catalog/items?code=12355">http://strawberry-linux.com/catalog/items?code=12355</a>
       </p>
-
       <h2 id="接続機器と接続方法-1">接続機器と接続方法</h2>
       <p>RaspberryPIにi2c接続で通信。</p>
-
       <p>(留意点1) 3.3VをVSUPPLYとVDDIOに供給。SCLK/VSSIOとMISO/ASELはGNDに接続。</p>
-
       <p>i2cアドレスを0x1Dとしています。( MISO/ASELがLow ) ※Highで0x53となる。</p>
-
       <p>(留意点2) プルアップ抵抗は3k-5kΩ。( 3.7kΩだったかな )</p>
       <p>(留意点3) OSErrorは受け流すことにしました。</p>
-
       <h2 id="測定レンジについて">測定レンジについて</h2>
       <p>range2G設定にしてあります。( 256,000LSB/g ±4.096g-range )</p>
-
       <p>但し、算出数値の単位は加速度:m/s<sup>2</sup>としている。</p>
-
       <p>この場合の計算式は、以下のとおり。( 前提として、重力加速度 g = 9.80665 m/s<sup>2</sup> )</p>
-
       <div>"x-axis":allAxes['x']*g/256000.0,"y-axis":allAxes['y']*g/256000.0,"z-axis":allAxes['z']*g/256000.0
       </div>
-      
       <ul>
         <li>range2G設定 -&gt; 256,000LSB/g ±2.048g-range</li>
         <li>range4G設定 -&gt; 128,000LSB/g ±4.096g-range</li>
         <li>range8G設定 -&gt; 64,000LSB/g ±8.192g-range</li>
       </ul>
-
       <h2 id="注意-1">注意</h2>
       <p>最初はprint文をアンコメントし、Influxdb書き込み部分をコメントアウトして要確認。</p>
-
       <p>LOCAL NETWORK上のInfluxdb v1.8サーバーへデータを送信。</p>
-
       <p>InfluxQLは以下のような形で情報取得。(Grafana等利用)</p>
-      <pre class="highlight"><code>SELECT mean("x-axis") FROM "autogen"."adxl355_measure" WHERE $timeFilter GROUP BY time($__interval) fill(none)</code></pre>
-
+      <pre
+        class="highlight"><code>SELECT mean("x-axis") FROM "autogen"."adxl355_measure" WHERE $timeFilter GROUP BY time($__interval) fill(none)</code></pre>
       <h2 id="acknowledgments--謝辞--1">Acknowledgments ( 謝辞 )</h2>
-
       <p>Markrad, you have been very helpful.</p>
-
       <p><a href="https://github.com/markrad/ADXL355">https://github.com/markrad/ADXL355</a></p>
-
     </section>
   </div>
 </body>
