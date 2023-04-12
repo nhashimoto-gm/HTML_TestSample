@@ -167,8 +167,7 @@
       <p>LOCAL NETWORK上のInfluxdb v1.8サーバーへデータを送信。</p>
 
       <p>InfluxQLは以下のような形で情報取得。(Grafana等利用)</p>
-      <pre class="highlight"><code>SELECT mean("x-axis") FROM "autogen"."adxl355_measure" WHERE $timeFilter GROUP BY time($__interval)
-        fill(none)</code></pre>
+      <pre class="highlight"><code>SELECT mean("x-axis") FROM "autogen"."adxl355_measure" WHERE $timeFilter GROUP BY time($__interval) fill(none)</code></pre>
 
       <h2 id="acknowledgments--謝辞--1">Acknowledgments ( 謝辞 )</h2>
 
